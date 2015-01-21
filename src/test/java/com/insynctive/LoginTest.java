@@ -21,13 +21,11 @@ public class LoginTest extends com.insynctive.TestBase {
             Thread.sleep(1000);
         }
 
-        driver.findElement(By.id("login_UserName_I")).clear();
         driver.findElement(By.id("login_UserName_I")).sendKeys("ppetrea@mystaffdesk.com");
-        driver.findElement(By.id("login_Password_I")).clear();
         driver.findElement(By.id("login_Password_I")).sendKeys("123qwe");
         driver.findElement(By.id("login_Login_CD")).click();
         for (int second = 0;; second++) {
-            if (second >= 60) fail("timeout");
+            if (second >= 70) fail("timeout");
             try { if (isElementPresent(By.id("tds_body_newsTab_AT0T"))) break; } catch (Exception e) {}
             Thread.sleep(1000);
         }
