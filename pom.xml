@@ -121,9 +121,7 @@
       <properties>
         <site.url>http://localhost/</site.url>
       </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
+
     </profile>
     <profile>
       <id>devhost</id>
@@ -133,8 +131,11 @@
     </profile>
     <profile>
       <id>testhost</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <properties>
-        <site.url>http://testhost/</site.url>
+        <site.url>https://alpha.insynctiveapps.com/</site.url>
       </properties>
     </profile>
     <profile>
