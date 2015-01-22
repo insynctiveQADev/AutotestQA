@@ -22,6 +22,7 @@ public class LoginTest extends com.insynctive.TestBase {
         }
 
         driver.findElement(By.id("login_UserName_I")).sendKeys("ppetrea@mystaffdesk.com");
+        driver.findElement(By.id("PasswordLabel")).click();
         driver.findElement(By.id("login_Password_I")).sendKeys("123qwe");
         driver.findElement(By.id("login_Login_CD")).click();
         for (int second = 0;; second++) {
