@@ -14,7 +14,7 @@ public class LoginTest extends com.insynctive.TestBase {
 
     @Test
     public void testLogin() throws Exception {
-        driver.get(baseUrl + "/Insynctive.Hub/Login.aspx?ReturnUrl=%2fInsynctive.Hub%2fDefault.aspx%3fReason%3dexpired&Reason=expired");
+        driver.get(baseUrl + "");
         for (int second = 0;; second++) {
             if (second >= 60) fail("timeout");
             try { if (isElementPresent(By.id("login_Login_CD"))) break; } catch (Exception e) {}
@@ -22,7 +22,7 @@ public class LoginTest extends com.insynctive.TestBase {
         }
 
         driver.findElement(By.id("login_UserName_I")).sendKeys("ppetrea@mystaffdesk.com");
-        driver.findElement(By.id("PasswordLabel")).click();
+        //driver.findElement(By.id("PasswordLabel")).click();
         driver.findElement(By.id("login_Password_I")).sendKeys("123qwe");
         driver.findElement(By.id("login_Login_CD")).click();
         for (int second = 0;; second++) {

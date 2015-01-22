@@ -74,6 +74,8 @@
       <id>firefox</id>
       <properties>
         <capabilities>/firefox.capabilities</capabilities>
+          <browser.version>39</browser.version>
+          <browser.platform>Windows 8.1</browser.platform>
       </properties>
       <activation>
         <activeByDefault>true</activeByDefault>
@@ -121,7 +123,6 @@
       <properties>
         <site.url>http://localhost/</site.url>
       </properties>
-
     </profile>
 
     <profile>
@@ -130,6 +131,7 @@
         <site.url>http://devhost/</site.url>
       </properties>
     </profile>
+
     <profile>
       <id>testhost</id>
       <activation>
@@ -154,9 +156,9 @@
 
     </profile>
       <profile>
-          <id>Sauce</id>
+          <id>sauce</id>
           <properties>
-              <grid2.hub>http://ivolf:90e3bb89-c21d-4885-85cf-f25494db06ff@ondemand.saucelabs.com:80/wd/hub</grid2.hub>
+              <grid.url>http://ivolf:90e3bb89-c21d-4885-85cf-f25494db06ff@ondemand.saucelabs.com:80/wd/hub</grid.url>
           </properties>
           <activation>
               <activeByDefault>true</activeByDefault>
