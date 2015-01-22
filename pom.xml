@@ -44,7 +44,7 @@
         <configuration>
           <encoding>UTF-8</encoding>
         </configuration>
-      </plugin> 
+      </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.17</version>
@@ -123,6 +123,7 @@
       </properties>
 
     </profile>
+
     <profile>
       <id>devhost</id>
       <properties>
@@ -150,10 +151,17 @@
       <properties>
         <grid.url></grid.url>
       </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
+
     </profile>
+      <profile>
+          <id>Sauce</id>
+          <properties>
+              <grid2.hub>http://ivolf:90e3bb89-c21d-4885-85cf-f25494db06ff@ondemand.saucelabs.com:80/wd/hub</grid2.hub>
+          </properties>
+          <activation>
+              <activeByDefault>true</activeByDefault>
+          </activation>
+      </profile>
     <profile>
       <id>grid</id>
       <properties>

@@ -13,7 +13,7 @@ public class LoginTest extends com.insynctive.TestBase {
     private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-    public void testUntitled() throws Exception {
+    public void testLogin() throws Exception {
         driver.get(baseUrl + "/Insynctive.Hub/Login.aspx?ReturnUrl=%2fInsynctive.Hub%2fDefault.aspx%3fReason%3dexpired&Reason=expired");
         for (int second = 0;; second++) {
             if (second >= 60) fail("timeout");
