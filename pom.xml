@@ -22,6 +22,12 @@
       <artifactId>webdriver-factory</artifactId>
       <version>1.1.43</version>
     </dependency>
+    <dependency>
+      <groupId>com.saucelabs</groupId>
+      <artifactId>sauce_testng</artifactId>
+      <version>[1.0.0,)</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
     <resources>
@@ -74,12 +80,7 @@
       <id>firefox</id>
       <properties>
         <capabilities>/firefox.capabilities</capabilities>
-          <browser.version>39</browser.version>
-          <browser.platform>Windows 8.1</browser.platform>
       </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
     </profile>
     <profile>
       <id>chrome</id>
@@ -134,9 +135,6 @@
 
     <profile>
       <id>testhost</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
       <properties>
         <site.url>https://alpha.insynctiveapps.com</site.url>
       </properties>
@@ -160,9 +158,7 @@
           <properties>
               <grid.url>http://ivolf:90e3bb89-c21d-4885-85cf-f25494db06ff@ondemand.saucelabs.com:80/wd/hub</grid.url>
           </properties>
-          <activation>
-              <activeByDefault>true</activeByDefault>
-          </activation>
+
       </profile>
     <profile>
       <id>grid</id>

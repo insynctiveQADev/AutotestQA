@@ -1,16 +1,18 @@
-package com.insynctive;
+package com.insynctiveSauce;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-public class LoginTest extends com.insynctive.TestBase {
+public class SauceLoginTest extends TestbaseSauce {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
+    private WebDriver driver;
 
     @Test
     public void testLogin() throws Exception {
@@ -37,6 +39,7 @@ public class LoginTest extends com.insynctive.TestBase {
             verificationErrors.append(e.toString());
         }
     }
+
 
     private boolean isElementPresent(By by) {
         try {

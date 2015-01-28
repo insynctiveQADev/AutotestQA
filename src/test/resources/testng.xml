@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Tests" verbose="5">
-  <test name="Test1">
+  <parameter name="username" value="ivolf" />
+  <parameter name="key" value="90e3bb89-c21d-4885-85cf-f25494db06ff" />
+  <parameter name="browser" value="chrome" />
+  <parameter name="browserVersion" value="" />
+  <parameter name="os" value="Windows 8.1" />
+
+  <test name="Login">
     <classes>
-      <class name="com.insynctive.LoginTest"/>
+      <class name="com.insynctiveSauce.SauceNewLoginTest"/>
     </classes>
   </test>  
 </suite>
